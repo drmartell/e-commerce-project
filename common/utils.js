@@ -1,5 +1,3 @@
-export default makePrettyCurrency;
-
 const makePrettyCurrency = number => {
     number
         .toLocaleString(
@@ -8,3 +6,5 @@ const makePrettyCurrency = number => {
                 style: 'currency', currency: 'USD' 
             });
 };
+
+export default makePrettyCurrency;
