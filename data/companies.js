@@ -73,3 +73,10 @@ const companiesArr = [
 ];
 
 export default companiesArr;
+
+export const appleOrder = [
+    {
+        id: 'AAPL',
+        quantity: 2
+    }
+];

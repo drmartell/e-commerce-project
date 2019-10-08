@@ -1,5 +1,5 @@
-import companiesArr from './companies.js';
-import renderProductLi from './render-product.js';
+import companiesArr from '../data/companies.js/index.js';
+import renderProductLi from '../products/render-product.js/index.js';
 
 const mainSection = document.getElementsByTagName('ul')[0];
 
