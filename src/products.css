@@ -10,33 +10,92 @@ body {
     margin: 0;
 }
 
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 ul {
+    background: #ffffff;
     text-align: center;
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    width: 250px;
+    width: 450px;
+    border: 4px rgb(97, 58, 0) solid;
+    border-radius: 21px;
+    padding: 30px;
+    margin: 22px;
 }
 
 li {
     margin: 10px;
 }
 
-.button-div {
+#name-li {
+    background-color: rgb(0, 45, 143);
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 7px;
+    border-radius: 13px;
+}
+
+img {
+    border-radius: 14px;
+}
+
+#price-li {
+    font-weight: 600;
+}
+
+/* .button-div {
     display: flex;
     justify-content: center;
+} */
+
+button {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #ffee66;
+}
+
+button:after {
+    content: " 🛒";
+}
+
+button:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+
+button:active {
+	position:relative;
+	top:1px;
 }
 
 header {
-    display: flex;
+    display: block;
+    text-align: center;
     justify-content: space-between;
     align-items: center;
     background: black;
     color: white;
+    font-weight: bold;
 }
 
+/*
 header nav a {
     color: white;
     border: 1px solid white;
@@ -69,4 +128,4 @@ h1 {
 .hero-image {
     height: 250px;
     margin-top: -35px;
-}
+} */
