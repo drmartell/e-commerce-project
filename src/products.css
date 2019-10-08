@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo|Oswald');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    background: #eee;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+/* ul {
+    background: #ffffff;
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    border: 4px rgb(97, 58, 0) solid;
+    border-radius: 21px;
+    padding: 30px;
+    margin: 22px;
+} */
+
+li {
+    background: #ffffff;
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    border: 4px rgb(97, 58, 0, 0.75) solid;
+    border-radius: 21px;
+    padding: 30px;
+    margin: 22px;
+    box-shadow: 5px 5px 28px grey;
+}
+
+#item-name {
+    background-color: rgb(0, 45, 143);
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 7px;
+    border-radius: 13px;
+}
+
+img {
+    border-radius: 14px;
+    margin: 15px 0px 0px 0px;
+}
+
+div{
+    padding: 5px;
+}
+
+#price-li {
+    font-weight: 600;
+}
+
+/* .button-div {
+    display: flex;
+    justify-content: center;
+} */
+
+button {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #ffee66;
+}
+
+button:after {
+    content: " 🛒";
+}
+
+button:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}
+
+header {
+    display: block;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
+/*
+header nav a {
+    color: white;
+    border: 1px solid white;
+    padding: 3px 8px;
+    text-decoration: none;
+    transition: color 200ms ease-in;
+}
+
+header nav a:hover {
+    color: coral;
+    border: 1px solid coral;
+}
+
+header, main {
+    padding: 8px;
+}
+
+h1 {
+    font-family: 'Oswald';
+}
+
+.hidden {
+    display: none;
+}
+
+.centered {
+    text-align: center;
+}
+
+.hero-image {
+    height: 250px;
+    margin-top: -35px;
+} */
