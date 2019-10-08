@@ -1,12 +1,18 @@
 import companiesArr from './companies.js';
-import renderProductUl from './render-product.js';
+import renderProductLi from './render-product.js';
 
-const mainSection = document.getElementsByTagName('section')[0];
+const mainSection = document.getElementsByTagName('ul')[0];
+
+// companiesArr.forEach(company => {
+//     const ul = document.createElement('ul');
+//     ul.innerHTML = renderProductUl(company);
+//     mainSection.appendChild(ul);
+// });
 
 companiesArr.forEach(company => {
-    const ul = document.createElement('ul');
-    ul.innerHTML = renderProductUl(company);
-    mainSection.appendChild(ul);
+    const li = document.createElement('li');
+    li.innerHTML = renderProductLi(company);
+    mainSection.appendChild(li);
 });
 
-export default renderProductUl;
+export default renderProductLi;
