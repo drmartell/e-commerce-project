@@ -1,6 +1,3 @@
-import companiesArr from '../data/companies.js';
-import cart from '../data/cart.js';
-
 export default function makePrettyCurrency(number) {
     return number
         .toLocaleString(

@@ -19,6 +19,7 @@ header {
     color: white;
     font-weight: bold;
 }
+
 nav {
     margin-top: 16px;
     text-align: right;
@@ -26,8 +27,12 @@ nav {
 }
 
 #splash-img {
-    margin: auto;
-    width: 50%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 650px;
+    margin-top: 25px;
 }
 
 /* https://css-tricks.com/css-basics-styling-links-like-boss/ */
@@ -49,4 +54,66 @@ a:hover {
 a:active {
     box-shadow: none;
     top: 5px;
+}
+
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_table_fancy */
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #002d8fb3;
+    color: white;
+}
+
+button {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #ffee66;
+}
+
+button:after {
+    content: " 🛒";
+}
+
+button:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+
+button:active {
+	position:relative;
+	top:1px;
 }

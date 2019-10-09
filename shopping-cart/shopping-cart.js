@@ -5,7 +5,7 @@ import cart from '../data/cart.js';
 
 const tableBodyElement = document.getElementsByTagName('tbody')[0];
 
-cart.forEach((lineItem, i) => {
+cart.forEach(lineItem => {
     const matchingCompany = findById(companiesArr, lineItem.id);
     if (matchingCompany !== null) {
         let cartRow = renderTableRow(matchingCompany, lineItem);
