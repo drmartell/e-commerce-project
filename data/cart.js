@@ -6,7 +6,7 @@ const cart = [{
     quantity: 500
 }, {
     id: 'AAPL',
-    quantity: 1000
+    quantity: 50
 }, {
     id: 'WFC',
     quantity: 250
