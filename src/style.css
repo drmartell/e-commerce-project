@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo|Oswald');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    background: #eee;
+    margin: 0;
+}
+
+header {
+    display: block;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+nav {
+    margin-top: 16px;
+    text-align: right;
+    height: 47px;     
+}
+
+#splash-img {
+    margin: auto;
+    width: 50%;
+}
+
+/* https://css-tricks.com/css-basics-styling-links-like-boss/ */
+a {
+    background-color: #002d8f;
+    box-shadow: 0 5px 0 darkred;
+    color: white;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover {
+    background-color: darkred;
+    cursor: pointer;
+}
+
+a:active {
+    box-shadow: none;
+    top: 5px;
+}
