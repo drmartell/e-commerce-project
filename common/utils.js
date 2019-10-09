@@ -21,6 +21,12 @@ export function calcLineItem(quant, amt) {
     return Math.round(rawTotal * 100) / 100;
 }
 
+export function CalcOrderTotal(cartArr, prodArr) {
+    let orderTotal = 0;
+    cartArr.forEach(lineItem => orderTotal += calcLineItem(lineItem.quantity, prodArr.price));
+    return Math.round(orderTotal, 2);
+}
+
 const testfunc = findById(companiesArr, 'AAPL');
 console.log(JSON.stringify(testfunc));
 console.log(testfunc);
