@@ -1,17 +1,3 @@
-// const renderProductUlMyWay = (company) => {
-//     const ulInnerHTML = '' +
-//         `<li>
-//             <span id="item-name">${company.name}</span>
-//             <div id="image-div"><img src="${company.image}" alt="${company.id}" /></div>
-//             <div id="description-div">${company.description}</div>
-//             <div id="category-div">${company.category}</div>
-//             <div id="price-div">$${company.price.toFixed(2)}<span> per share</span></div>
-//             <div id="button-div"><button value="${company.id}">Add</button></div>
-//         </li>
-//     `.trim().replace(/>\s+</g, '><');
-//     return ulInnerHTML;
-// };
-
 const renderProductLi = (company) => {
     const li = document.createElement('li');
 

@@ -1,0 +1,19 @@
+table {
+    width: 500px;
+}
+
+td tr {
+    text-align: center;
+    border: 1px black solid;
+}
+
+button:after {
+    content: "";
+}
+
+button {
+    position: absolute;
+    transition: .5s ease;
+    top: 50%;
+    left: 50%;
+}
