@@ -1,3 +1,5 @@
+import { addToCart } from '../products/add-to-cart.js';
+
 const renderProductLi = (company) => {
     const li = document.createElement('li');
 
@@ -33,9 +35,10 @@ const renderProductLi = (company) => {
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = company.id;
+    button.addEventListener('click', e => addToCart(e.target));
     buttonDiv.appendChild(button);
 
-    return li.innerHTML;
+    return li;
 };
 
 function createDiv(divId, content = '') {
