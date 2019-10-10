@@ -20,20 +20,6 @@ test('findById should return company with id that matches one passed in', assert
     assert.equal(foundCompany.id, expected);
 });
 
-test('render function should return HTML that matches expected', function(assert) {
-    //Arrange
-    // Set up your parameters and expectations
-    const expected = '<tr><td>Apple</td><td>50</td><td>$227.06</td><td>$11,353.00</td></tr>';
-
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const result = renderTableRow(companiesArr[2], cart[2]);
-
-    //Assert
-    // Make assertions about what is expected valid result
-    assert.equal(result.outerHTML, expected);
-});
-
 test('calculate line total', assert => {
     // arrange
     const quantity = 3;
@@ -49,7 +35,7 @@ test('calculate line total', assert => {
 
 test('calculate order total', (assert) => {
     // arrange
-    const expected = 49147.5;
+    const expected = 49146.5;
 
     // act
     const orderTotal = calcOrderTotal(cart, companiesArr);

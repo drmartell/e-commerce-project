@@ -1,28 +1,32 @@
-import { findById, setCartAsString, getCartAsArray } from '../common/utils.js';
+import { findById } from '../common/utils.js';
+import { setCartAsString, getCartAsArray } from '../shopping-cart/cart-api.js';
 
 export const addToCart = productId => {
+    const productDropDown = document.getElementById(productId);
+    const quantityToAdd = productDropDown.value;
+
     let theCartInMemory = getCartAsArray();
     
-    const oneOfThisItem = {
+    const theFirstOfThisItem = {
         id: productId,
-        quantity: 1,
+        quantity: quantityToAdd,
     };
 
     // if empty cart, add one of this item
     if (!theCartInMemory) {
         //update the cart held in memory
-        theCartInMemory = ([oneOfThisItem]);
+        theCartInMemory = ([theFirstOfThisItem]);
     }
     // if the cart has contents...
     else {
         const cartItem = findById(theCartInMemory, productId);
         // if this item is in the cart, increase quantity
         if (cartItem) {
-            cartItem.quantity += 1;
+            cartItem.quantity += quantityToAdd;
         }
         // if this item is not in the cart, add it
         else {
-            theCartInMemory.push(oneOfThisItem);
+            theCartInMemory.push(theFirstOfThisItem);
         }
     } 
     // now, write the memory to file
