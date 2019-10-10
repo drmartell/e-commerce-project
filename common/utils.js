@@ -23,10 +23,27 @@ export function calcLineItem(quant, amt) {
 
 export function calcOrderTotal(cartArr, prodArr) {
     let orderTotal = 0;
-    cartArr.forEach((lineItem, i) =>
-        orderTotal += calcLineItem(lineItem.quantity, prodArr[i].price));
+    cartArr.forEach((lineItem, i) => {
+        // if (cartArr.id === prodArr[i].id) 
+        prodArr.forEach(product => {
+            if (lineItem.id === product.id)
+                orderTotal += calcLineItem(lineItem.quantity, product.price);
+        });
+    });
     return Math.round(orderTotal * 100) / 100;
 }
+
+// export function calcOrderTotal(cartArr, prodArr) {
+//     let orderTotal = 0;
+//     cartArr.forEach((lineItem, i) => {
+//         // if (cartArr.id === prodArr[i].id) 
+//         prodArr.forEach(product => {
+//             if (lineItem.id === product.id)
+//                 orderTotal += calcLineItem(lineItem.quantity, prodArr[i].price);
+//         });
+//     });
+//     return Math.round(orderTotal * 100) / 100;
+// }
 
 export function justGiveMeAnObject(someArrOfObj) {
     return someArrOfObj[0];

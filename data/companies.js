@@ -5,7 +5,7 @@ const JPM = {
     image: 'https://logo.clearbit.com/jpmorganchase.com',
     description: 'JPMorgan Chase & Co. operates as a financial services company worldwide. It operates in four segments: Consumer & Community Banking (CCB), Corporate & Investment Bank (CIB), Commercial Banking (CB), and Asset & Wealth Management (AWM).',
     category: 'Banks - Global',
-    price: 114.37
+    price: 114.36
 };
 
 const BAC = {

@@ -17,6 +17,10 @@ button:after {
     content: "";
 }
 
+#button-table {
+    text-align: right;
+}
+
 /* button {
     position: absolute;
     transition: .5s ease;

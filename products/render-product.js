@@ -59,10 +59,10 @@ function createDiv(divId, content = '') {
     return thisDiv;
 }
 
-function createOption(value, text = '') {
+function createOption(value, text = null) {
     const thisOption = document.createElement('option');
     thisOption.value = value;
-    thisOption.textContent = text === '' ? value : text;
+    thisOption.textContent = text === null ? value : text;
     return thisOption;
 }
 export default renderProductLi;
