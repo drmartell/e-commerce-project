@@ -1,3 +1,9 @@
+#table-div {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 table {
     width: 500px;
 }
@@ -11,9 +17,13 @@ button:after {
     content: "";
 }
 
-button {
+#button-table {
+    text-align: right;
+}
+
+/* button {
     position: absolute;
     transition: .5s ease;
     top: 50%;
     left: 50%;
-}
+} */

@@ -1,17 +1,34 @@
 import companiesArr from '../data/companies.js';
 import makePrettyCurrency, { findById, calcOrderTotal } from '../common/utils.js';
+import { getCartAsArray, clearCart } from '../shopping-cart/cart-api.js';
 import renderTableRow from '../shopping-cart/render-table-row.js';
-import cart from '../data/cart.js';
 
 const tableBodyElement = document.getElementsByTagName('tbody')[0];
+const orderTotalCell = document.getElementById('order-total-cell');
+const placeOrderButton = document.getElementById('place-order');
 
-cart.forEach(lineItem => {
-    const matchingCompany = findById(companiesArr, lineItem.id);
-    if (matchingCompany !== null) {
-        let cartRow = renderTableRow(matchingCompany, lineItem);
-        tableBodyElement.appendChild(cartRow);
-    }
+const theCartInMemory = getCartAsArray();
+
+// set button disabled by default
+placeOrderButton.disabled = true;
+
+placeOrderButton.addEventListener('click', () => {
+    alert(JSON.stringify(theCartInMemory, true, 2));
+    clearCart();
+    window.location.assign('../src/index.html');
 });
 
-const orderTotalCell = document.getElementById('order-total-cell');
-orderTotalCell.textContent = makePrettyCurrency(calcOrderTotal(cart, companiesArr));
+if (theCartInMemory !== null) {
+    // enable the button if there are items in the cart
+    placeOrderButton.disabled = false;
+
+    theCartInMemory.forEach(lineItem => {
+        const matchingCompany = findById(companiesArr, lineItem.id);
+        if (matchingCompany !== null) {
+            let cartRow = renderTableRow(matchingCompany, lineItem);
+            tableBodyElement.appendChild(cartRow);
+        }
+    });
+
+    orderTotalCell.textContent = makePrettyCurrency(calcOrderTotal(theCartInMemory, companiesArr));
+}

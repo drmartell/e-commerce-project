@@ -7,9 +7,9 @@ export default function makePrettyCurrency(number) {
             });
 }
 
-export function findById(companies, orderId) {
-    for (let company of companies) {
-        if (company.id === orderId) return company;
+export function findById(matchArr, Id) {
+    for (let item of matchArr) {
+        if (item.id === Id) return item;
     }
     return null;
 }
@@ -21,11 +21,11 @@ export function calcLineItem(quant, amt) {
 
 export function calcOrderTotal(cartArr, prodArr) {
     let orderTotal = 0;
-    cartArr.forEach((lineItem, i) =>
-        orderTotal += calcLineItem(lineItem.quantity, prodArr[i].price));
+    cartArr.forEach(lineItem => {
+        prodArr.forEach(product => {
+            if (lineItem.id === product.id)
+                orderTotal += calcLineItem(lineItem.quantity, product.price);
+        });
+    });
     return Math.round(orderTotal * 100) / 100;
-}
-
-export function justGiveMeAnObject(someArrOfObj) {
-    return someArrOfObj[0];
 }
