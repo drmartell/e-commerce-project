@@ -1,6 +1,5 @@
 import companiesArr from '../data/companies.js';
 import { findById, calcLineItem, calcOrderTotal } from '../common/utils.js';
-import renderTableRow from '../shopping-cart/render-table-row.js';
 import cart from '../data/cart.js';
 
 const test = QUnit.test;
