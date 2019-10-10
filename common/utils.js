@@ -1,3 +1,5 @@
+const CART_KEY = 'cart';
+
 export default function makePrettyCurrency(number) {
     return number
         .toLocaleString(
@@ -7,9 +9,9 @@ export default function makePrettyCurrency(number) {
             });
 }
 
-export function findById(companies, orderId) {
-    for (let company of companies) {
-        if (company.id === orderId) return company;
+export function findById(matchArr, Id) {
+    for (let item of matchArr) {
+        if (item.id === Id) return item;
     }
     return null;
 }
@@ -29,3 +31,8 @@ export function calcOrderTotal(cartArr, prodArr) {
 export function justGiveMeAnObject(someArrOfObj) {
     return someArrOfObj[0];
 }
+
+export const cartExists = () => localStorage.getItem(CART_KEY);
+export const setCartAsString = (cartArr) => localStorage.setItem(CART_KEY, JSON.stringify(cartArr));
+export const getCartAsArray = () => JSON.parse(localStorage.getItem(CART_KEY));
+export const emptyCart = () => localStorage.removeItem(CART_KEY);

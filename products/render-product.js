@@ -29,13 +29,24 @@ const renderProductLi = (company) => {
     perShareSpan.textContent = ' per share';
     priceDiv.appendChild(perShareSpan);
 
+    const dropdownDiv = createDiv('dropdown-div');
+    li.appendChild(dropdownDiv);
+
+    const select = document.createElement('select');
+    select.id = company.id;
+    dropdownDiv.appendChild(select);
+
+    for (let i = 1; i <= 10; i++) {
+        select.appendChild(createOption(i));
+    }
+    
     const buttonDiv = createDiv('button-div');
     li.appendChild(buttonDiv);
-    
+
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = company.id;
-    button.addEventListener('click', e => addToCart(e.target));
+    button.addEventListener('click', e => addToCart(e.target.value));
     buttonDiv.appendChild(button);
 
     return li;
@@ -48,4 +59,10 @@ function createDiv(divId, content = '') {
     return thisDiv;
 }
 
+function createOption(value, text = '') {
+    const thisOption = document.createElement('option');
+    thisOption.value = value;
+    thisOption.textContent = text === '' ? value : text;
+    return thisOption;
+}
 export default renderProductLi;
