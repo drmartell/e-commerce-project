@@ -10,9 +10,9 @@ html, body {
 }
 
 body {
-    display: grid;
     width: 80%;
     margin: 0 auto;
+    min-width: 900px;
 }
 
 header {
@@ -23,18 +23,17 @@ header {
 }
 
 #logo {
-    margin: auto;
-    width: 200px;
-    height: 200px;
+    margin: auto 5px auto 5px;
+    width: 160px;
+    height: 160px;
 }
 
 h1 {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    flex-grow: 2;
     color: white;
     font-weight: bold;
+    align-self: center;
 }
 
 ul {
