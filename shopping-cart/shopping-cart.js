@@ -9,7 +9,6 @@ const placeOrderButton = document.getElementById('place-order');
 
 const theCartInMemory = getCartAsArray();
 
-// set button disabled by default
 placeOrderButton.disabled = true;
 
 placeOrderButton.addEventListener('click', () => {
@@ -19,7 +18,6 @@ placeOrderButton.addEventListener('click', () => {
 });
 
 if (theCartInMemory !== null) {
-    // enable the button if there are items in the cart
     placeOrderButton.disabled = false;
 
     theCartInMemory.forEach(lineItem => {
