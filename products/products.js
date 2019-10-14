@@ -7,5 +7,3 @@ companiesArr.forEach(company => {
     const li = renderProductLi(company);
     mainSection.appendChild(li);
 });
-
-export default renderProductLi;

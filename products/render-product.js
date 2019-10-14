@@ -4,7 +4,6 @@ const renderProductLi = (company) => {
     const li = document.createElement('li');
 
     const itemNameSpan = document.createElement('span');
-    itemNameSpan.id = 'item-name';
     itemNameSpan.textContent = company.name;
     li.appendChild(itemNameSpan);
 
@@ -52,7 +51,7 @@ const renderProductLi = (company) => {
     return li;
 };
 
-function createDiv(divId, content = '') {
+function createDiv(divId, content = null) {
     const thisDiv = document.createElement('div');
     thisDiv.id = divId;
     thisDiv.textContent = content;
