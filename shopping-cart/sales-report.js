@@ -2,7 +2,7 @@ import companiesArr from '../data/companies.js';
 import makePrettyCurrency, { findById, calcOrderTotal } from '../common/utils.js';
 import { getCartAsArray, clearCart } from '../shopping-cart/cart-api.js';
 import renderTableRow from '../shopping-cart/render-table-row.js';
-import { placeOrder } from './sales.js'
+import { SalesArray } from './sales.js'
 
 const tableBodyElement = document.getElementsByTagName('tbody')[0];
 const orderTotalCell = document.getElementById('order-total-cell');
@@ -14,7 +14,7 @@ placeOrderButton.disabled = true;
 
 placeOrderButton.addEventListener('click', () => {
     alert(JSON.stringify(theCartInMemory, true, 2));
-    placeOrder();
+    newSale.placeOrder();
     clearCart();
     window.location.assign('../src/index.html');
 });

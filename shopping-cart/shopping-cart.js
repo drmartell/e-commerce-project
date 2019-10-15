@@ -15,6 +15,7 @@ placeOrderButton.addEventListener('click', () => {
     alert(JSON.stringify(theCartInMemory, true, 2));
     clearCart();
     window.location.assign('../src/index.html');
+    
 });
 
 if (theCartInMemory !== null) {
