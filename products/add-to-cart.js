@@ -1,11 +1,11 @@
 import { findById } from '../common/utils.js';
-import { setCartAsString, getCartAsArray } from '../shopping-cart/cart-api.js';
+import { setCartAsString, retrieveFromStorage, CART_KEY } from '../shopping-cart/cart-api.js';
 
 export const addToCart = productId => {
     const productDropDown = document.getElementById(productId);
     const quantityToAdd = Number(productDropDown.value);
 
-    let theCartInMemory = getCartAsArray();
+    let theCartInMemory = retrieveFromStorage(CART_KEY);
     
     const newItemInCart = {
         id: productId,
